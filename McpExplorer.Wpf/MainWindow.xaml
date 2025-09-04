@@ -1,0 +1,33 @@
+﻿<Window x:Class="McpExplorer.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:McpExplorer.Wpf"
+        mc:Ignorable="d"
+        Title="MCP Explorer" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button Content="Select MP3 File" x:Name="SelectFileButton" Click="SelectFileButton_Click" />
+            <TextBlock x:Name="SelectedFileText" Margin="10,0" VerticalAlignment="Center" />
+        </StackPanel>
+
+        <TextBox Grid.Row="1" x:Name="TranscriptionText" Margin="0,10" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" IsReadOnly="True" />
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button Content="Optimize for Email" x:Name="OptimizeEmailButton" Click="OptimizeEmailButton_Click" />
+            <Button Content="Optimize for Teams" x:Name="OptimizeTeamsButton" Click="OptimizeTeamsButton_Click" Margin="10,0" />
+            <Button Content="Optimize based on context" x:Name="OptimizeContextButton" Click="OptimizeContextButton_Click" Margin="10,0" />
+            <Button Content="Select Tool with AI" x:Name="SelectToolWithAIButton" Click="SelectToolWithAIButton_Click" Margin="10,0" />
+        </StackPanel>
+
+        <TextBox Grid.Row="3" x:Name="OptimizedText" Margin="0,10" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" IsReadOnly="True" />
+    </Grid>
+</Window>

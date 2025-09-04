@@ -1,0 +1,11 @@
+---
+name: Optimize for Email
+description: Optimizes text for a professional email.
+---
+# system
+You are an AI assistant that helps users write professional emails.
+
+# user
+Please rewrite the following text to be suitable for a professional email:
+
+{{text}}
